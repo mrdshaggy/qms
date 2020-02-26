@@ -1,0 +1,57 @@
+.tabs {
+  &__nav {
+    display: flex;
+  }
+
+  &__btn {
+    padding: 0 0 13px;
+    margin-right: 60px;
+    color: rgba(#00052B, .4);
+    font-weight: 600;
+    transition: .2s;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 48px;
+      height: 4px;
+      background: $c-blue;
+      border-radius: 100px;
+      opacity: 0;
+      visibility: hidden;
+      transition: .2s;
+    }
+    &.is-active {
+      color: rgba(#00052B, 1);
+      &:after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      color: rgba(#00052B, 1);
+    }
+  }
+
+  &__content {
+    margin-top: 68px;
+    .h1 {
+      margin-bottom: 24px;
+    }
+    p {
+      margin-left: 60px;
+    }
+  }
+
+  &__pane {
+    display: none;
+    &.is-active {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+html, body {
+  font-family: 'Open Sans', ;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+h1, .h1 {
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+h2, .h2 {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+h3, .h3 {
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+h4, .h4 {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+h5, .h5 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+// Colors
+.text-black          { color: rgba(#000 ,.8); }
+.text-light          { color: rgba(#00052B, .8); }
+.text-dark           { color: rgba(#00042A, .8); }
+
+// Weight
+.text-bold, strong, b   { font-weight: bold; }
+.text-semibold          { font-weight: 600; }

@@ -1,0 +1,64 @@
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    * {
+        box-sizing: border-box;
+    }
+}
+
+//container
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    // border-left: 1px solid red;
+    // border-right: 1px solid red;
+    @include media-breakpoint-up(md) {
+        max-width: 720px;
+    }
+    @include media-breakpoint-up(lg) {
+        max-width: 960px;
+    }
+    @include media-breakpoint-up(xl) {
+        max-width: 1320px;
+    }
+    @include media-breakpoint-up(xxl) {
+        max-width: 1630px;
+    }
+}
+
+.text-container {
+    max-width: 850px;
+    @include media-breakpoint-down(lg) {
+        max-width: 700px;
+    }
+    &--sm {
+        max-width: 780px;
+        @include media-breakpoint-down(lg) {
+            max-width: 630px;
+        }
+    }
+    &--xs {
+        max-width: 730px;
+        @include media-breakpoint-down(lg) {
+            max-width: 580px;
+        }
+    }
+    &--xxs {
+        max-width: 600px;
+        @include media-breakpoint-down(lg) {
+            // max-width: 500px;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        max-width: 100%!important;
+    }
+}
+//end container
+
+
+img {
+    max-width: 100%;
+}

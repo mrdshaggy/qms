@@ -1,0 +1,25 @@
+.section {
+  
+}
+
+
+
+
+.whatis {
+  min-height: 730px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #66687F;
+  padding-top: 120px;
+  &__content {
+    margin-left: 50%;
+    padding-left: 20px;
+    .h1 {
+      margin-bottom: 14px;
+    }
+    p {
+      margin-bottom: 26px;
+    }
+  }
+}

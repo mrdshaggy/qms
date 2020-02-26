@@ -1,0 +1,23 @@
+.header {
+  &__wrapper {
+    position: relative;
+    padding: 60px 0 120px;
+    min-height: 700px;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 26px;
+  }
+  &__btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .btn-group {
+    margin-top: 58px;
+  }
+}
