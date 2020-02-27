@@ -1,0 +1,24 @@
+.card-person {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 30px rgba(0, 4, 42, 0.1);
+  border-radius: 24px;
+  padding: 40px 50px 60px;
+  max-width: 380px;
+  text-align: center;
+
+  .p-img {
+    margin-bottom: 16px;
+  }
+  .p-name {
+    // font-size: 22px;
+    // line-height: 26px;
+    // color: $c-blue;
+    margin-bottom: 2px;
+  }
+  .p-job {
+    color: #00042A;
+    opacity: 0.4;
+    margin-bottom: 24px;
+    margin-top: 2px;
+  }
+}

@@ -9,6 +9,7 @@ h1, .h1 {
   font-size: 48px;
   line-height: 1;
   font-weight: 600;
+  margin-bottom: 24px;
 }
 
 h2, .h2 {
@@ -49,6 +50,8 @@ h5, .h5 {
 .text-black          { color: rgba(#000 ,.8); }
 .text-light          { color: rgba(#00052B, .8); }
 .text-dark           { color: rgba(#00042A, .8); }
+.text-lighter        { color: rgba(#00042A, .6); }
+.text-blue           { color: $c-blue; }
 
 // Weight
 .text-bold, strong, b   { font-weight: bold; }

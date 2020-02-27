@@ -6,6 +6,11 @@ a, button {
  background: none;
 }
 
+p + .btn,
+.list + .btn {
+  margin-top: 24px;
+}
+
 .btn {
   display: inline-flex;
   height: 60px;

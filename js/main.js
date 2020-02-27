@@ -24,3 +24,16 @@ window.addEventListener("load", function() {
 		myTabs[i].addEventListener("click", myTabClicks)
 	}
 });
+
+
+// Feedback slider
+var slider = tns({
+	container: '.feedbacks',
+	items: 1,
+	slideBy: 'page',
+	mouseDrag: true,
+	autoplay: true,
+	autoHeight: true,
+  swipeAngle: false,
+  speed: 400
+});
