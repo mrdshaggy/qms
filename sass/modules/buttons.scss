@@ -89,3 +89,34 @@ p + .btn,
     }
   }
 }
+
+
+// Links
+.link-default {
+  color: $c-blue;
+  text-decoration: underline;
+  &:hover {
+    color: #5d76e8;
+  }
+  &:focus {
+    color: #445dcf;
+  }
+
+  &--inverted {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.link-more {
+  color: rgba(#00052B, .4);
+  transition: .3s;
+  & > img {
+    margin-left: 19px;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -30,10 +30,32 @@ window.addEventListener("load", function() {
 var slider = tns({
 	container: '.feedbacks',
 	items: 1,
+	controls: false,
+	navContainer: '.feedbacks-nav',
 	slideBy: 'page',
 	mouseDrag: true,
-	autoplay: true,
+	autoplay: false,
 	autoHeight: true,
   swipeAngle: false,
   speed: 400
 });
+
+
+// faq
+var qBtn = document.querySelectorAll('.faq__item');
+var qAnswer = document.querySelectorAll('.faq__answer');
+
+qBtn.forEach(function(el) {
+	el.addEventListener('click', function(e) {
+		this.classList.toggle('is-active');
+	});
+})
+
+// modal
+function triggerModal(el) {
+	var modal = document.getElementById('sendRequest');
+	el.addEventListener('click', function(e){
+		e.preventDefault();
+		modal.classList.toggle('is-active');
+	});
+}

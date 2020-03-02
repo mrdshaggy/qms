@@ -1,0 +1,13 @@
+.footer {
+  font-size: 14px;
+  line-height: 26px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 110px;
+  & > * {
+    margin-right: 60px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
