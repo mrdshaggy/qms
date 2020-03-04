@@ -1,23 +1,73 @@
 .header {
+  .container {
+    @media (max-width: 1199px) {
+      padding-right: 0;
+    }
+    @media (max-width: 767px) {
+      padding-left: 0;
+    }
+  }
   &__wrapper {
     position: relative;
     padding: 60px 0 120px;
     min-height: 700px;
+    background-image: url('../img/qms-cover@2x.jpg');
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
+    @media (max-width: 1720px) {
+      background-image: url('../img/qms-cover-laptop@2x.jpg');
+    }
+    @media (max-width: 1199px) {
+      background-position: calc(100% + 350px) bottom;
+      background-size: cover;
+    }
+    @media (max-width: 767px) {
+      background: none;
+      padding-top: 0;
+      min-height: 0;
+      padding-bottom: 0;
+      border-bottom: 1px solid rgba(#00042A, .07);
+      padding-bottom: 40px;
+    }
   }
   &__nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 26px;
+    @media (max-width: 767px) {
+      border-bottom: 1px solid rgba(#00042A ,.07);
+      margin-bottom: 15px;
+      padding-left: 30px;
+      align-items: center;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
   }
   &__btn {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    @media (max-width: 767px) {
+      background: none!important;
+      height: auto;
+    }
   }
   .btn-group {
     margin-top: 58px;
+    @media (max-width: 767px) {
+      margin-top: 24px;
+      & > .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media (max-width: 1720px) {
+    padding-left: 60px;
+  }
+  @media (max-width: 1440px) {
+    padding-left: 0;
   }
 }

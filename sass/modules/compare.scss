@@ -1,3 +1,15 @@
+.section--compare {
+  @media (max-width: 1720px) {
+    padding: 0 120px;
+  }
+  @media (max-width: 1365px) {
+    padding: 0 60px;
+  }
+  @media (max-width: 1199px) {
+    padding: 0;
+  }
+}
+
 .compare {
   margin-top: 50px;
   &__title {
@@ -7,6 +19,9 @@
     font-weight: 600;
     margin: 0 30px;
     padding: 35px 0;
+    @media (max-width: 1720px) {
+      margin: 0 15px;
+    }
   }
 
   &__text {
@@ -15,6 +30,9 @@
     color: rgba(#00052B, .6);
     margin: 0 30px;
     padding: 35px 0;
+    @media (max-width: 1720px) {
+      margin: 0 15px;
+    }
   }
 
   &__row {
@@ -29,6 +47,10 @@
         max-width: 240px;
         text-align: right;
         margin-left: 0;
+        @media (max-width: 1720px) {
+          max-width: 140px;
+          margin-right: 35px;
+        }
       }
     }
     &:last-child,
@@ -63,6 +85,10 @@
     background: #EFF8FE;
     padding-right: 75px;
     padding-left: 80px;
+    @media (max-width: 1720px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
   }
 
   .btn {

@@ -15,33 +15,48 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__wrapper" style="background-image: url('img/qms-cover@2x.jpg');">
+            <div class="header__wrapper">
                 <div class="header__nav">
                     <img src="img/qms-logo.svg" alt="qms-logo">
-                    <a href="#" class="btn btn--white header__btn">Особистий кабінет <img src="img/arrow-right.svg" alt=""></a>
+                    <a href="#" class="btn btn--white header__btn">
+                        <span class="hidden-xs">Особистий кабінет</span>
+                        <span class="visible-xs">Кабінет</span>
+                        <img src="img/arrow-right.svg" alt=""></a>
                 </div>
                 <div class="header__content">
                     <div class="tabs">
                         <nav class="tabs__nav">
-                            <a href="#tab1" class="tabs__btn is-active">Для медичних закладів</a>
+                            <a href="#tab1" class="tabs__btn is-active">
+                                <span class="hidden-xs">Для медичних закладів</span>
+                                <span class="visible-xs">Для мед. закладів</span>
+                            </a>
                             <a href="#tab2" class="tabs__btn">Для лікарів</a>
                         </nav>
+                        <span class="visible-xs">
+                            <img src="img/qms-cover-mobile.jpg" alt="">
+                        </span>
                         <div class="tabs__content">
                             <div id="tab1" class="tabs__pane is-active">
-                                <div class="h1 text-dark">Управління якістю <br> медичних послуг</div>
-                                <p class="text-light">QMS (quality medical system) – це програмне <br> рішення для забезпечення якісної медичної <br> допомоги в медичних закладах.</p>
+                                <div class="h1 text-dark">Управління якістю <br class="hidden-xs"> медичних послуг</div>
+                                <p class="text-light">QMS (quality medical system) – це програмне <br class="hidden-xs"> рішення для забезпечення якісної медичної <br class="hidden-xs"> допомоги в медичних закладах.</p>
         
                                 <div class="btn-group">
-                                    <button class="btn btn--green" onclick="triggerModal(this);">Впровадити в медичному закладі</button>
+                                    <button class="btn btn--green" onclick="triggerModal(this);">
+                                        <span class="hidden-xs">Впровадити в медичному закладі</span>
+                                        <span class="visible-xs">Впровадити в мед. закладі</span>
+                                    </button>
                                     <button class="btn btn--blue">Зв’язатись з нами</button>
                                 </div>
                             </div>
                             <div id="tab2" class="tabs__pane">
-                                <div class="h1 text-dark">Управління <br> медичних послуг</div>
-                                <p class="text-light">QMS (quality medical system) – це програмне <br> рішення для забезпечення якісної медичної допомоги.</p>
+                                <div class="h1 text-dark">Управління <br class="hidden-xs"> медичних послуг</div>
+                                <p class="text-light">QMS (quality medical system) – це програмне <br class="hidden-xs"> рішення для забезпечення якісної медичної допомоги.</p>
         
                                 <div class="btn-group">
-                                    <button class="btn btn--green" onclick="triggerModal(this);">Впровадити в медичному закладі</button>
+                                    <button class="btn btn--green" onclick="triggerModal(this);">
+                                        <span class="hidden-xs">Впровадити в медичному закладі</span>
+                                        <span class="visible-xs">Впровадити в мед. закладі</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -51,11 +66,14 @@
         </div>
     </header>
 
-    <section class="section whatis" style="background-image: url('img/laptop.jpg');">
+    <section class="section whatis">
         <div class="container">
             <div class="whatis__content">
                 <div class="h1 text-dark">Що таке QMS?</div>
                 <p>Внутрішній контроль якості надання медичної допомоги, який здійснюється медичним закладом за наступними напрямами:</p>
+                <span class="visible-xs">
+                    <img src="img/laptop.jpg" alt="">
+                </span>
                 <ul class="list">
                     <li>Контроль за кваліфікацією; </li>
                     <li>Моніторинг дотримання стандартів у сфері охорони здоров’я, клінічних протоколів; </li>
@@ -69,13 +87,13 @@
 
     <section class="section">
         <div class="container">
-            <div class="text-container text-center mx-auto">
+            <div class="text-container text-center mx-auto text-left-xs">
                 <h3>QMS передбачає, через аналіз отриманих показників, створення рейтингу від кожного лікаря до структурного підрозділу та закладу цілком.</h3>
             </div>
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section--control">
         <div class="container">
             <div class="control">
                 <div class="section section--blue section--narrowed">
@@ -86,7 +104,10 @@
                             <li>впорядкований та оформлений набір досягнень та відображення рівня кваліфікації передусім лікаря, а також медичного закладу чи підрозділу.</li>
                             <li>система аналітики навчальних активностей кожного лікаря, підрозділу та медичного закладу загалом;</li>
                         </ul>
-                        <button class="btn btn--green">Впровадити в медичному закладі</button>
+                        <button class="btn btn--green" onclick="triggerModal(this);">
+                            <span class="hidden-xs">Впровадити в медичному закладі</span>
+                            <span class="visible-xs">Впровадити в мед. закладі</span>
+                        </button>
                     </div>
                 </div>
                 <div class="card-chart">
@@ -102,9 +123,9 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section--kep">
         <div class="container">
-            <div class="kep" style="background-image: url('img/kep-bg.jpg');">
+            <div class="kep">
                 <div class="kep__content">
                     <div class="h1 text-black">Контрольно-експертна <br> робота «КЕР»</div>
                     <p class="text-lighter">Аналіз та аудит роботи кожного лікаря.
@@ -122,12 +143,12 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section--contact">
         <div class="container">
             <div class="contact">
                 <div class="section section--blue section--narrowed">
+                    <h1 class="text-black">Зворотній зв’язок</h1>
                     <div class="text-container">
-                        <h1 class="text-black">Зворотній зв’язок</h1>
                         <p class="text-lighter">Аналіз роботи лікарів та відділень через оцінку пацієнтами відповідності наданих медичних послуг їхнім очікуванням.</p>
                         <button class="btn btn--green">Впровадити в медичному закладі</button>
                     </div>
@@ -142,7 +163,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section--benefits">
         <div class="container">
             <h1 class="text-light">Переваги</h1>
             <div class="benefits">
@@ -165,7 +186,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section--logos">
         <div class="container">
             <div class="section section--blue logos">
                 <img src="img/logo01.svg" alt="">
@@ -218,7 +239,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section--faq">
         <div class="container">
             <div class="section section--blue">
                 <h1 class="text-dark">Запитання <br> та відповіді</h1>
@@ -276,13 +297,13 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section--test">
         <div class="container">
-            <div class="contact" style="background-image: url('img/contact.jpg');">
-                <div class="contact__container">
+            <div class="test">
+                <div class="test__container">
                     <h1>Отримайте інструмент для росту вашої клініки</h1>
                     <p>Впорядкований та оформлений набір досягнень та відображення рівня кваліфікації передусім лікаря, а також медичного закладу чи підрозділу.</p>
-                    <div class="contact__form">
+                    <div class="test__form">
                         <input type="text" placeholder="Номер телефону">
                         <button class="btn btn--lightblue">Записатись на тест-драйв</button>
                     </div>
@@ -291,7 +312,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section--compare">
         <div class="container">
             <h1 class="text-dark">Порівняльна таблиця</h1>
             <div class="compare">
