@@ -24,6 +24,7 @@ p + .btn,
   transition: .2s;
   @media (max-width: 767px) {
     font-size: 18px;
+    height: 50px;
     width: 100%;
     justify-content: center;
   }

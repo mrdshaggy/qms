@@ -48,6 +48,7 @@
   &__btn {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    width: auto;
     @media (max-width: 767px) {
       background: none!important;
       height: auto;
@@ -67,7 +68,7 @@
   @media (max-width: 1720px) {
     padding-left: 60px;
   }
-  @media (max-width: 1440px) {
+  @media (max-width: 1365px) {
     padding-left: 0;
   }
 }

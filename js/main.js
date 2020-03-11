@@ -1,5 +1,3 @@
-console.log('main.js');
-
 // Tabs
 window.addEventListener("load", function() {
 	// store tabs variable
@@ -11,6 +9,7 @@ window.addEventListener("load", function() {
 		var clickedTab = tabClickEvent.currentTarget;
 		clickedTab.classList.add("is-active");
 		tabClickEvent.preventDefault();
+		
 		var myContentPanes = document.querySelectorAll(".tabs__pane");
 		for (i = 0; i < myContentPanes.length; i++) {
 			myContentPanes[i].classList.remove("is-active");
@@ -20,6 +19,7 @@ window.addEventListener("load", function() {
 		var activePane = document.querySelector(activePaneId);
 		activePane.classList.add("is-active");
 	}
+	
 	for (i = 0; i < myTabs.length; i++) {
 		myTabs[i].addEventListener("click", myTabClicks)
 	}

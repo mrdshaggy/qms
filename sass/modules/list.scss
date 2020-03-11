@@ -41,19 +41,40 @@
     &:nth-child(1) {
       max-width: 470px;
       background: linear-gradient(90deg, #62BCF9 0%, rgba(98, 188, 249, 0.5) 100%);
+      @media (max-width: 767px) {
+        max-width: 60%;
+      }
     }
     &:nth-child(2) {
       max-width: 687px;
       background: linear-gradient(90deg, #4D95F0 0%, rgba(77, 149, 240, 0.5) 100%);
+      @media (max-width: 767px) {
+        max-width: 100%;
+      }
     }
     &:nth-child(3) {
       max-width: 326px;
       background: linear-gradient(90deg, #4765EE 0%, rgba(71, 101, 238, 0.5) 100%);
+      @media (max-width: 767px) {
+        max-width: 45%;
+      }
     }
     &:nth-child(4) {
       max-width: 225px;
       margin-bottom: 0;
       background: linear-gradient(90deg, #4340DD 0%, rgba(67, 64, 221, 0.5) 100%);
+      @media (max-width: 767px) {
+        max-width: 35%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      height: 28px;
+      font-size: 12px;
+      line-height: 1;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      padding: 0 20px;
     }
   }
 }

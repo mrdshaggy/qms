@@ -5,20 +5,34 @@
   padding: 40px 50px 60px;
   max-width: 380px;
   text-align: center;
+  @media (max-width: 767px) {
+    padding: 10%;
+    border-radius: 15px;
+  }
 
   .p-img {
     margin-bottom: 16px;
+    @media (max-width: 767px) {
+      max-width: 50%!important;
+      margin-bottom: 10px;
+    }
   }
-  .p-name {
-    // font-size: 22px;
-    // line-height: 26px;
-    // color: $c-blue;
+  .h4 {
     margin-bottom: 2px;
+    @media (max-width: 767px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
   .p-job {
     color: #00042A;
     opacity: 0.4;
     margin-bottom: 24px;
     margin-top: 2px;
+    @media (max-width: 767px) {
+      font-size: 8px;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
   }
 }

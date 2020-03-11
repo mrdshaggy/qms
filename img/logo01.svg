@@ -1,7 +1,8 @@
-<svg width="208" height="146" viewBox="0 0 208 146" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="240" height="153" viewBox="0 0 240 153" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="240" height="153" fill="#EFF8FE"/>
 <g opacity="0.6">
-<rect x="0.428467" y="0.5" width="207" height="145" fill="url(#pattern0)" style="mix-blend-mode:multiply"/>
-<rect x="0.428467" y="0.5" width="207" height="145" fill="#879CB0" style="mix-blend-mode:overlay"/>
+<rect x="16" y="4" width="207" height="145" fill="url(#pattern0)" style="mix-blend-mode:multiply"/>
+<rect x="16" y="4" width="207" height="145" fill="#879CB0" style="mix-blend-mode:overlay"/>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">

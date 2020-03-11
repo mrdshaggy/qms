@@ -8,6 +8,9 @@
 
 .faq {
   margin: 50px 0;
+  @media (max-width: 767px) {
+    margin: 0 0 20px;
+  }
   
   &__question {
     min-height: 100px;
@@ -22,6 +25,12 @@
     width: 100%;
     transition: .3s;
     text-align: left;
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 26px;
+      min-height: 0;
+      padding: 25px 25px 25px 75px;
+    }
     &:before,
     &:after {
       content: '';
@@ -34,6 +43,11 @@
       background-repeat: no-repeat;
       background-position: center;
       transition: .3s;
+      @media (max-width: 767px) {
+        left: 40px;
+        top: 28px;
+        transform: none;
+      }
     }
     &:before {
       background-image: url('../img/plus.svg');
@@ -57,12 +71,20 @@
     @media (max-width: 1199px) {
       padding-right: 40px;
     }
+    @media (max-width: 767px) {
+      font-size: 16px;
+      line-height: 20px;
+      padding-left: 75px;
+    }
   }
 
   &__item {
     border-bottom: 1px solid rgba(#00042A, .07);
     @media (max-width: 1199px) {
       margin: 0 -40px;
+    }
+    @media (max-width: 767px) {
+      margin: 0 -35px;
     }
     &:last-child {
       border: none;
