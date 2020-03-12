@@ -1,29 +1,42 @@
-// Tabs
-window.addEventListener("load", function() {
-	// store tabs variable
-	var myTabs = document.querySelectorAll(".tabs__btn");
-  function myTabClicks(tabClickEvent) {
-		for (var i = 0; i < myTabs.length; i++) {
-			myTabs[i].classList.remove("is-active");
+function openTab(evt, tabName) {
+	var i, tabcontent, tablinks;
+	evt.preventDefault();
+  tabcontent = document.getElementsByClassName("tabs__pane");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tabs__btn");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " is-active";
+}
+
+
+if (window.innerWidth < 991) {
+	function openTabGroup(evt, tabGroup) {
+		var i, tabcontent, tablinks, dataID;
+		evt.preventDefault();
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
 		}
-		var clickedTab = tabClickEvent.currentTarget;
-		clickedTab.classList.add("is-active");
-		tabClickEvent.preventDefault();
-		
-		var myContentPanes = document.querySelectorAll(".tabs__pane");
-		for (i = 0; i < myContentPanes.length; i++) {
-			myContentPanes[i].classList.remove("is-active");
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" is-active", "");
 		}
-		var anchorReference = tabClickEvent.target;
-		var activePaneId = anchorReference.getAttribute("href");
-		var activePane = document.querySelector(activePaneId);
-		activePane.classList.add("is-active");
-	}
 	
-	for (i = 0; i < myTabs.length; i++) {
-		myTabs[i].addEventListener("click", myTabClicks)
+		dataID = document.querySelectorAll("[data-id='"+tabGroup+"']");
+		for (i = 0; i < dataID.length; i++) {
+			dataID[i].style.display = "block";
+		}
+		
+		evt.currentTarget.className += " is-active";
 	}
-});
+}
+
+
 
 
 // Feedback slider

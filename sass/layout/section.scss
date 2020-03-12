@@ -548,16 +548,35 @@
       padding: 0;
     }
   }
+  @media (max-width: 767px) {
+    .visible-xs {
+      width: 100%;
+    }
+  }
 }
 .test {
   background-image: url('../img/contact.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   @media (max-width: 1720px) {
     background-image: url('../img/contact-laptop.jpg');
   }
   @media (max-width: 1199px) {
     background-position: center;
+  }
+  @media (max-width: 767px) {
+    background: none;
+  }
+  &__logo {
+    position: absolute;
+    top: 100px;
+    left: 125px;
+    mix-blend-mode: luminosity;
+    @media (max-width: 1199px) {
+      top: 60px;
+      left: 80px;
+    }
   }
   &__container {
     display: flex;
@@ -571,19 +590,45 @@
       max-width: 490px;
     }
     @media (max-width: 1199px) {
+      max-width: 450px;
+      margin: 0 40px 0 auto;
+    }
+    @media (max-width: 991px) {
       max-width: 360px;
       margin: 0 40px 0 auto;
     }
+    @media (max-width: 767px) {
+      margin: 0;
+      max-width: 100%;
+      height: auto;
+      padding: 40px 30px;
+      border-bottom: 1px solid rgba(#00042A, .07);
+    }
     h1 {
       color: #fff;
+      @media (max-width: 767px) {
+        color: rgba(#00042A, .8);
+      }
     }
     p {
       color: rgba(#fff, .6);
+      @media (max-width: 767px) {
+        color: rgba(#00042A, .6);
+      }
     }
   }
 
   &__form {
     margin-top: 50px;
+    @media (max-width: 991px) {
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
     input {
       display: block;
       width: 100%;
@@ -601,6 +646,19 @@
       color: #fff;
       @include input-placeholder() {
         color: #fff;
+      }
+      @media (max-width: 767px) {
+        border: 2px solid rgba(#00042A, .2);
+        height: 50px;
+        color: rgba(#00042A, .6);
+        font-size: 18px;
+        line-height: 1;
+        @include input-placeholder() {
+          color: rgba(#00042A, .6);
+        }
+        &:focus {
+          border-color: rgba($c-lightblue, .5);
+        }
       }
     }
   }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>QMS</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap&subset=cyrillic" rel="stylesheet">
@@ -26,11 +26,11 @@
                 <div class="header__content">
                     <div class="tabs">
                         <nav class="tabs__nav">
-                            <a href="#tab1" class="tabs__btn is-active">
+                            <a href="#" onclick="openTab(event, 'tab1')" class="tabs__btn is-active">
                                 <span class="hidden-xs">Для медичних закладів</span>
                                 <span class="visible-xs">Для мед. закладів</span>
                             </a>
-                            <a href="#tab2" class="tabs__btn">Для лікарів</a>
+                            <a href="#" onclick="openTab(event, 'tab2')" class="tabs__btn">Для лікарів</a>
                         </nav>
                         <span class="visible-xs">
                             <img src="img/qms-cover-mobile.jpg" alt="">
@@ -159,7 +159,10 @@
                                 <img src="img/email-ico.svg" alt="email icon">
                             </div>
                         </div>
-                        <button class="btn btn--green">Впровадити в медичному закладі</button>
+                        <button class="btn btn--green" onclick="triggerModal(this);">
+                            <span class="hidden-xs">Впровадити в медичному закладі</span>
+                            <span class="visible-xs">Впровадити в мед. закладі</span>
+                        </button>
                     </div>
                 </div>
                 
@@ -303,8 +306,10 @@
     </section>
 
     <section class="section section--test">
+        <img class="visible-xs" src="img/contact-mobile.jpg" alt="Userpic" srcset="img/contact-mobile.jpg 1x, img/contact-mobile@2x.jpg 2x">
         <div class="container">
             <div class="test">
+                <img class="test__logo hidden-xs" src="img/qms-logo-light.svg" alt="">
                 <div class="test__container">
                     <h1>Отримайте інструмент для росту вашої клініки</h1>
                     <p>Впорядкований та оформлений набір досягнень та відображення рівня кваліфікації передусім лікаря, а також медичного закладу чи підрозділу.</p>
@@ -321,29 +326,29 @@
         <div class="container">
             <h1 class="text-dark">Порівняльна таблиця</h1>
             <div class="compare">
-                <div class="compare__row">
+                <div class="compare__row compare__row--tabs">
                     <div class="compare__title"></div>
-                    <div class="compare__title">Для лікарів</div>
-                    <div class="compare__title highlighted">Для Керівників</div>
-                    <div class="compare__title">Для персоналу</div>
+                    <div class="compare__title tablinks is-active" onclick="openTabGroup(event, 'doctor')">Для лікарів</div>
+                    <div class="compare__title tablinks highlighted" onclick="openTabGroup(event, 'leader')">Для Керівників</div>
+                    <div class="compare__title tablinks" onclick="openTabGroup(event, 'personal')">Для персоналу</div>
                 </div>
                 <div class="compare__row">
                     <div class="compare__title">QMS</div>
-                    <div class="compare__text">Система яка допомагає покращити якість послуг лікаря. Допомагає навчатись та аналізувати помилки;</div>
-                    <div class="compare__text highlighted">Управління та аналіз якості медичних послуг. Дає змогу швидко реагувати на проблемні місця та стимулювати персонал;</div>
-                    <div class="compare__text">Облік витрат на навчання;</div>
+                    <div class="compare__text tabcontent" data-id="doctor">Система яка допомагає покращити якість послуг лікаря. Допомагає навчатись та аналізувати помилки;</div>
+                    <div class="compare__text tabcontent highlighted" data-id="leader">Управління та аналіз якості медичних послуг. Дає змогу швидко реагувати на проблемні місця та стимулювати персонал;</div>
+                    <div class="compare__text tabcontent" data-id="personal">Облік витрат на навчання;</div>
                 </div>
                 <div class="compare__row">
                     <div class="compare__title">Освітнє <br> портфоліо</div>
-                    <div class="compare__text">Систематизувати та упорядкувати навчальні заходи, підготовка до ТУ та атестації. Знайти відповідні інтернет-сайти для проходження курсів;</div>
-                    <div class="compare__text highlighted">Допомагає отримати та аналізувати інформацію по клініці/відділенню/лікарю щодо навчання персоналу, здачі атестацій та ТУ (закон МОЗ) виявляти немотивованих та нагороджувати мотивованих лікарів;</div>
-                    <div class="compare__text">Вести облік витрат по навчанню персоналу;</div>
+                    <div class="compare__text tabcontent" data-id="doctor">Систематизувати та упорядкувати навчальні заходи, підготовка до ТУ та атестації. Знайти відповідні інтернет-сайти для проходження курсів;</div>
+                    <div class="compare__text tabcontent highlighted" data-id="leader">Допомагає отримати та аналізувати інформацію по клініці/відділенню/лікарю щодо навчання персоналу, здачі атестацій та ТУ (закон МОЗ) виявляти немотивованих та нагороджувати мотивованих лікарів;</div>
+                    <div class="compare__text tabcontent" data-id="personal">Вести облік витрат по навчанню персоналу;</div>
                 </div>
                 <div class="compare__row">
                     <div class="compare__title">КЕР</div>
-                    <div class="compare__text">Отримувати зворотній зв’язок та аналіз ведення документації (діагностичних висновків, опису та вирішення клінічних випадків);</div>
-                    <div class="compare__text highlighted">Володіти “показником” якості надання медичних послуг через аналіз документації по кожному клінічному випадка. Виявляти типові помилки лікарів та давати поради по їх усуненню;</div>
-                    <div class="compare__text">Для HR. Мотивувати “якісних” працівників. Для експертів - отримувати оплату за кожну перевірену експертну роботу;</div>
+                    <div class="compare__text tabcontent" data-id="doctor">Отримувати зворотній зв’язок та аналіз ведення документації (діагностичних висновків, опису та вирішення клінічних випадків);</div>
+                    <div class="compare__text tabcontent highlighted" data-id="leader">Володіти “показником” якості надання медичних послуг через аналіз документації по кожному клінічному випадка. Виявляти типові помилки лікарів та давати поради по їх усуненню;</div>
+                    <div class="compare__text tabcontent" data-id="personal">Для HR. Мотивувати “якісних” працівників. Для експертів - отримувати оплату за кожну перевірену експертну роботу;</div>
                 </div>
                 <div class="compare__row compare__row--buttons">
                     <div class="compare__title"></div>

@@ -20,4 +20,16 @@
       margin-right: 0;
     }
   }
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    & > * {
+      margin-right: 0;
+      &:first-child {
+        width: 100%;
+      }
+    }
+  }
 }
