@@ -1344,7 +1344,8 @@ p + .btn,
   background-repeat: no-repeat;
   background-size: contain;
   color: #66687F;
-  padding-top: 120px; }
+  padding-top: 120px;
+  margin-bottom: 30px; }
   @media (max-width: 1800px) {
     .whatis {
       background-position: -150px; } }
@@ -1364,7 +1365,8 @@ p + .btn,
       padding-top: 40px;
       background: none;
       padding-bottom: 0;
-      margin-bottom: 30px; } }
+      margin-bottom: 50px;
+      min-height: 0; } }
   .whatis__content {
     margin-left: 50%;
     padding-left: 10px; }
@@ -1671,16 +1673,17 @@ p + .btn,
       @media (max-width: 767px) {
         .benefits .benefit__icon {
           margin-bottom: 25px; } }
-    .benefits .benefit h3 {
-      margin-bottom: 18px; }
+    .benefits .benefit h3, .benefits .benefit .h3 {
+      margin-bottom: 18px;
+      line-height: 1.2; }
       @media (max-width: 1720px) {
-        .benefits .benefit h3 {
+        .benefits .benefit h3, .benefits .benefit .h3 {
           max-width: 250px; } }
       @media (max-width: 991px) {
-        .benefits .benefit h3 {
+        .benefits .benefit h3, .benefits .benefit .h3 {
           max-width: 100%; } }
       @media (max-width: 767px) {
-        .benefits .benefit h3 {
+        .benefits .benefit h3, .benefits .benefit .h3 {
           margin-bottom: 8px; } }
 
 @media (max-width: 1199px) {
